@@ -117,7 +117,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
           {navLinks.map((link, index) => (
             <Item key={link.id} $open={open} $index={index}>
               <ItemLink href={`#${link.id}`} onClick={onClose}>
-                <small aria-hidden="true">{link.index}</small>
+                <small aria-hidden="true">{index + 1}</small>
                 {link.label}
               </ItemLink>
             </Item>

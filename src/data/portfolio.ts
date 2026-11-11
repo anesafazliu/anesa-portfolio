@@ -199,6 +199,8 @@ export const sections: Section[] = [
 /** Links shown in the navigation — a trimmed subset of `sections`. */
 export const navLinks = sections
   .filter((section) =>
-    ["about", "capabilities", "stack", "contact"].includes(section.id)
+    ["about", "capabilities", "stack", "approach", "contact"].includes(
+      section.id
+    )
   )
   .map((section) => ({ ...section, label: section.navLabel ?? section.label }));

@@ -15,7 +15,9 @@ const Bar = styled.header<{ $scrolled: boolean }>`
   right: 0;
   z-index: 100;
   background: ${({ $scrolled }) =>
-    $scrolled ? "color-mix(in srgb, var(--paper) 86%, transparent)" : "transparent"};
+    $scrolled
+      ? "color-mix(in srgb, var(--paper) 86%, transparent)"
+      : "transparent"};
   backdrop-filter: ${({ $scrolled }) => ($scrolled ? "blur(10px)" : "none")};
   transition: background 0.4s var(--ease);
 `;
@@ -67,8 +69,6 @@ const Links = styled.nav`
   }
 `;
 
-/* The block above each label is the original navigation idea from this repo,
-   kept and turned into the active-section indicator. */
 const NavLink = styled.a<{ $active: boolean }>`
   position: relative;
   padding-top: 0.875rem;
@@ -87,10 +87,9 @@ const NavLink = styled.a<{ $active: boolean }>`
     left: 0;
     height: 0.25rem;
     width: ${({ $active }) => ($active ? "100%" : "0.6rem")};
-    background: ${({ $active }) => ($active ? "var(--accent)" : "var(--rule-strong)")};
-    transition:
-      width 0.45s var(--ease-out),
-      background 0.3s var(--ease);
+    background: ${({ $active }) =>
+      $active ? "var(--accent)" : "var(--rule-strong)"};
+    transition: width 0.45s var(--ease-out), background 0.3s var(--ease);
   }
 
   &:hover,
