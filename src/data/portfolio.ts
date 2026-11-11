@@ -105,7 +105,6 @@ export const capabilities: Capability[] = [
 ];
 
 export const stack = {
-  /** Read top to bottom: the layers of an application, and what I use at each. */
   layers: [
     {
       index: "01",
@@ -159,7 +158,7 @@ export const principles: Principle[] = [
   {
     title: "Components, not screens",
     detail:
-      "Component-based architecture from the start — the codebase stays readable, extendable and cheap to change six months later.",
+      "Component-based architecture from the start. The codebase stays readable, extendable and cheap to change six months later.",
   },
   {
     title: "Test the endpoints",
@@ -189,11 +188,11 @@ export type Section = {
 };
 
 export const sections: Section[] = [
-  { id: "about", index: "02", label: "Profile", navLabel: "About" },
-  { id: "capabilities", index: "03", label: "Capabilities" },
-  { id: "stack", index: "04", label: "Stack" },
-  { id: "approach", index: "05", label: "Approach" },
-  { id: "contact", index: "06", label: "Contact" },
+  { id: "about", index: "</>", label: "Profile", navLabel: "About" },
+  { id: "capabilities", index: "</>", label: "Capabilities" },
+  { id: "stack", index: "</>", label: "Stack" },
+  { id: "approach", index: "</>", label: "Approach" },
+  { id: "contact", index: "</>", label: "Contact" },
 ];
 
 /** Links shown in the navigation — a trimmed subset of `sections`. */
