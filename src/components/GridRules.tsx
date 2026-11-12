@@ -11,8 +11,6 @@ const Frame = styled.div`
   padding-inline: var(--gutter);
 `;
 
-/* The rules sit exactly on the content measure, so every layout in the page
-   can be read against them. Column count steps with the layout breakpoints. */
 const Columns = styled.div`
   height: 100%;
   display: grid;
@@ -54,10 +52,6 @@ const Line = styled.span`
 
 const COLUMN_COUNT = 6;
 
-/**
- * The fixed column rules the whole layout is measured against. Purely
- * decorative — hidden from assistive tech, immune to pointer events.
- */
 export default function GridRules() {
   return (
     <Frame aria-hidden="true">

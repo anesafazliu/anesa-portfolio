@@ -10,7 +10,6 @@ import {
   StickyRail,
 } from "../styles/primitives";
 
-/** Surface the section sits on. `sunk` sets a section apart; `ink` closes the page. */
 export type Tone = "paper" | "sunk" | "ink";
 
 type SectionProps = {
@@ -48,11 +47,11 @@ const Shell = styled.section<{ $tone: Tone }>`
     `}
 `;
 
-/**
- * Every section shares one frame: a numbered mono label pinned in the left
- * rail, content on the right. The numbering is the spine of the page.
- */
-export default function Section({ id, children, tone = "paper" }: SectionProps) {
+export default function Section({
+  id,
+  children,
+  tone = "paper",
+}: SectionProps) {
   const { index, label } = sections.find((section) => section.id === id)!;
 
   return (

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-/** Freezes the page behind an open overlay without a layout jump. */
 export function useBodyScrollLock(locked: boolean) {
   useEffect(() => {
     if (!locked) return;

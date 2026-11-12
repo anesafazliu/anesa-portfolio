@@ -5,8 +5,6 @@ import { PrimaryCta, SecondaryCta } from "../styles/cta";
 import { person, socials } from "../data/portfolio";
 import { Container } from "../styles/primitives";
 
-/* The entrance runs on CSS animations rather than mount state: it survives a
-   background tab, and reduced motion collapses it to an instant cut. */
 const riseIn = keyframes`
   from {
     opacity: 0;
@@ -223,9 +221,7 @@ const SocialRow = styled.li`
   svg {
     flex-shrink: 0;
     color: var(--muted);
-    transition:
-      color 0.3s var(--ease),
-      transform 0.4s var(--ease-out);
+    transition: color 0.3s var(--ease), transform 0.4s var(--ease-out);
   }
 
   a:hover svg,

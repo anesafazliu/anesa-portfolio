@@ -1,9 +1,5 @@
 import styled, { css } from "styled-components";
 
-/**
- * Shared call-to-action geometry. Square corners, a colour wipe that rises
- * from the bottom edge, and a nudge on the trailing arrow.
- */
 const ctaBase = css`
   position: relative;
   display: inline-flex;

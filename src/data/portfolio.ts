@@ -38,7 +38,7 @@ export const person = {
   email: "anesafazl@gmail.com",
 
   intro:
-    "I develop full-stack web applications, combining intuitive React interfaces with robust REST APIs, .NET Core MVC backend services, and MySQL databases to create seamless, scalable solutions.",
+    "I develop full stack web applications, combining intuitive React interfaces with robust REST APIs, .NET Core MVC backend services, and MySQL databases to create seamless, scalable solutions.",
 
   introHighlights: ["React", "REST API", ".NET Core MVC", "MySQL"],
 } as const;
@@ -62,9 +62,9 @@ export const socials: Social[] = [
 ];
 
 export const about = {
-  lead: "I work across the whole application, not one end of it — the interface, the API underneath, and the data model both of them depend on.",
+  lead: "I work across the whole application, from the interface to the API underneath and the data model both of them depend on.",
   paragraphs: [
-    "On the front end that means React applications written in TypeScript and built on a component architecture: reusable components, page layouts and navigation composed into one system rather than a pile of one-off screens, holding their structure from a phone to a wide monitor.",
+    "On the front end that means React applications written in TypeScript and built on a component architecture: reusable components, page layouts and navigation composed into one system rather than a pile of individual screens, holding their structure from a phone to a wide monitor.",
     "Behind the interface it means REST APIs consumed with Axios, C# and .NET Core MVC web services, Node.js, and MySQL underneath endpoints and data models designed alongside the screens that consume them.",
     "Working both ends changes the work itself. The contract gets agreed up front, endpoints get tested as they are built, and integration problems surface before release instead of after it.",
   ],
@@ -82,7 +82,7 @@ export const capabilities: Capability[] = [
     id: "interfaces",
     title: "Interfaces built as systems",
     detail:
-      "React applications on a component architecture — reusable components, page layouts and navigation composed into a single consistent system, responsive by default and consistent across screen sizes.",
+      "React applications on a component architecture, with reusable components, page layouts and navigation composed into a single consistent system. Responsive by default and consistent across screen sizes.",
   },
   {
     id: "integration",
@@ -94,7 +94,7 @@ export const capabilities: Capability[] = [
     id: "services",
     title: "The services behind them",
     detail:
-      "C#, .NET Core MVC and Node.js web services — endpoints, data models and the API contract the front end is built against, designed to be consumed rather than worked around.",
+      "C#, .NET Core MVC and Node.js web services, with endpoints, data models and an API contract designed to be consumed rather than worked around.",
   },
   {
     id: "data",
@@ -158,7 +158,7 @@ export const principles: Principle[] = [
   {
     title: "Components, not screens",
     detail:
-      "Component-based architecture from the start. The codebase stays readable, extendable and cheap to change six months later.",
+      "A component architecture from the start. The codebase stays readable, extendable and cheap to change six months later.",
   },
   {
     title: "Test the endpoints",
@@ -168,22 +168,19 @@ export const principles: Principle[] = [
   {
     title: "Version control as habit",
     detail:
-      "Git-based workflow throughout: history that explains itself and work that can always be traced back.",
+      "A Git workflow throughout: history that explains itself and work that can always be traced back.",
   },
 ];
 
 export const contact = {
   lead: "Available for full stack development work.",
-  note: "Front end, back end, or the whole application. Email is the fastest way to reach me — I read everything and I reply.",
+  note: "Front end, back end, or the whole application. Email is the fastest way to reach me. I read everything and reply.",
 } as const;
 
 export type Section = {
   id: SectionId;
-  /** Marginal numeral — the spine running down the page. */
   index: string;
-  /** Title in the section rail. */
   label: string;
-  /** Shorter label for the navigation, where space is tight. */
   navLabel?: string;
 };
 
@@ -195,7 +192,6 @@ export const sections: Section[] = [
   { id: "contact", index: "</>", label: "Contact" },
 ];
 
-/** Links shown in the navigation — a trimmed subset of `sections`. */
 export const navLinks = sections
   .filter((section) =>
     ["about", "capabilities", "stack", "approach", "contact"].includes(

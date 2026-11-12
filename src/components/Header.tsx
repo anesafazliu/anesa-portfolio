@@ -157,7 +157,6 @@ export default function Header({ menuOpen, onMenuOpenChange }: HeaderProps) {
   const { progress, scrolled } = useScrollState();
   const active = useActiveSection(SECTION_IDS);
 
-  // A resize past the mobile breakpoint should never strand an open overlay.
   useEffect(() => {
     if (!menuOpen) return;
     const query = window.matchMedia("(min-width: 48rem)");

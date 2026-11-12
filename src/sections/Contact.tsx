@@ -157,7 +157,6 @@ export default function Contact() {
       <Reveal delay={180}>
         <Directory>
           {socials
-            .filter((social) => social.label !== "Email")
             .map((social) => (
               <Row key={social.label}>
                 <a href={social.href} target="_blank" rel="noreferrer">

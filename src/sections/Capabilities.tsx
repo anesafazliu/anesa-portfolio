@@ -64,7 +64,7 @@ export default function Capabilities() {
     <Section id="capabilities">
       <Reveal variant="mask">
         <Lead>
-          Four areas, one person — so nothing is handed over a wall halfway
+          Four areas, one person so nothing is handed over a wall halfway
           through.
         </Lead>
       </Reveal>

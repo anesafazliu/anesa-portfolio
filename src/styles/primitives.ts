@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-/** Page shell — every section aligns to this measure and these gutters. */
 export const Container = styled.div`
   width: 100%;
   max-width: var(--page-max);
@@ -8,7 +7,6 @@ export const Container = styled.div`
   padding-inline: var(--gutter);
 `;
 
-/** Editorial lead — the display serif, used to open a section. */
 export const Lead = styled.p`
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3.1vw, 2.5rem);
@@ -23,10 +21,6 @@ export const Body = styled.p`
   color: var(--ink-soft);
 `;
 
-/**
- * Two-column section frame: a sticky numbered label on the left, content on
- * the right. Collapses to a stacked header below the large breakpoint.
- */
 export const SectionGrid = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr);

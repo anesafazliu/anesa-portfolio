@@ -22,9 +22,7 @@ const Overlay = styled.div<{ $open: boolean }>`
   opacity: ${({ $open }) => ($open ? 1 : 0)};
   visibility: ${({ $open }) => ($open ? "visible" : "hidden")};
   transform: translateY(${({ $open }) => ($open ? "0" : "-1.5rem")});
-  transition:
-    opacity 0.45s var(--ease-out),
-    transform 0.45s var(--ease-out),
+  transition: opacity 0.45s var(--ease-out), transform 0.45s var(--ease-out),
     visibility 0.45s;
 
   @media (min-width: 48rem) {
@@ -42,9 +40,7 @@ const Item = styled.li<{ $open: boolean; $index: number }>`
 
   opacity: ${({ $open }) => ($open ? 1 : 0)};
   transform: translateY(${({ $open }) => ($open ? "0" : "0.75rem")});
-  transition:
-    opacity 0.5s var(--ease-out),
-    transform 0.5s var(--ease-out);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
   transition-delay: ${({ $open, $index }) => ($open ? 120 + $index * 55 : 0)}ms;
 
   &:last-child {
@@ -105,13 +101,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
   }, [open, onClose]);
 
   return (
-    <Overlay
-      ref={overlayRef}
-      id="mobile-menu"
-      $open={open}
-      /* Keep the closed menu out of the tab order and the a11y tree. */
-      inert={!open}
-    >
+    <Overlay ref={overlayRef} id="mobile-menu" $open={open} inert={!open}>
       <nav aria-label="Mobile">
         <Items>
           {navLinks.map((link, index) => (

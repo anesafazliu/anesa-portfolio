@@ -18,11 +18,6 @@ const Layers = styled.ol`
   border-top: 1px solid var(--rule-strong);
 `;
 
-/**
- * Each layer carries a segment of a single continuous rule down the left.
- * Stacked, they read as one application from the screen down to the database —
- * which is the whole claim this page is making.
- */
 const Layer = styled(Reveal)`
   display: grid;
   align-content: start;

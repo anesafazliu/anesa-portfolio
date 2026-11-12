@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 
 export type ScrollState = {
-  /** 0 → 1 through the document. Drives the header progress rule. */
   progress: number;
-  /** True once the page has moved off the very top. */
   scrolled: boolean;
 };
 
